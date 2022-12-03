@@ -1,84 +1,82 @@
-import React from 'react';
-import {View, Text, StatusBar, StyleSheet, Image} from 'react-native';
-// import imagem from './img/imagemdandan.jpg';
+import React, { useRef } from "react";
+import { Animated, Text, View, StyleSheet, Button, SafeAreaView } from "react-native";
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+
+export default function App(){
 
 
-function App(){
+  function fotoResumo(){
+    return(
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Aqui vai ficar minha foto de perfil e um breve resumo sobre mim \o/</Text>
+      </View>
+    );
+  }
 
+  function textoSobre() {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Aqui ficará um texto sobre mim \o/</Text>
+      </View>
+    );
+  }
 
+  function vidaAcademica() {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Aqui ficará tudo sobre minha vida acadêmica \o/</Text>
+      </View>
+    );
+  }
 
+  function oQueGosto() {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Aqui ficará tudo o que eu gosto \o/</Text>
+      </View>
+    );
+  }
+
+  function fim() {
+    return (
+      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+        <Text>Aqui será o fim :(</Text>
+      </View>
+    );
+  }
+
+  const Tab = createBottomTabNavigator();
   return(
-
-    <View styles={styles.body}>
-    <StatusBar> </StatusBar>
-      <View style={styles.borda1}></View>
-
-
-      <Text style={styles.curso}>DESENVOLVIMENTO DE SISTEMAS</Text>
-      {/* <Image style={styles.imagem} source={require('./img/imagemdandan.jpg')}/> */}
-
-      <Text style={styles.nome}>@eudaanilo</Text>
-
-
-      <Text style={styles.biografia}>Olá, me chamo Danilo e tenho 17 anos. Faço Desenvolvimento de Sistemas no Insituto Federal de Alagoas, Campus Maceió. Amo a Informática e suas especialidades</Text>
-
-      <View style={styles.borda2}></View>
-
-
-
-    </View>
-
-
+    <NavigationContainer>
+        <Tab.Navigator>
+          <Tab.Screen name="Foto de perfil" component={fotoResumo}/>
+          <Tab.Screen name="Texto sobre mim" component={textoSobre}/>
+          <Tab.Screen name="Vida acadêmica" component={vidaAcademica}/>
+          <Tab.Screen name="O que gosto" component={oQueGosto}/>
+          <Tab.Screen name="Fim" component={fim}/>
+        </Tab.Navigator>
+    </NavigationContainer>
   );
+
 }
 
 const styles = StyleSheet.create({
-  body:{
-    backgroundColor:'black',
-    flexDirection:'row',
-    justifyContent:'center',
-    alignItems: 'center',
-    display:'flex'
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center"
   },
-  nome:{
-    textAlign:'center',
-    marginTop:15,
-    fontWeight:'bold',
+  fadingContainer: {
+    padding: 20,
+    backgroundColor: "powderblue"
   },
-  curso:{
-    fontWeight:'bold',
-    fontSize:15,
-    fontFamily: 'Open Sans',
-    textAlign:'center',
-    marginTop:30,
-    color:'black',
+  fadingText: {
+    fontSize: 28
   },
-  borda1:{
-    margin:0,
-    height: 70,
-    width:'100%',
-    backgroundColor: 'purple',
-    marginTop:1
-  },
-  borda2:{
-    height:70,
-    width:'100%',
-    backgroundColor:'purple'
-  },
-  imagem:{
-    alignSelf:'center',
-    height:150,
-    width:150,
-    marginTop:40,
-    borderWidth:4,
-    borderRadius:'200px'
-  },
-  biografia:{
-    marginTop:20,
-    fontFamily:'Courier New',
-    fontSize:15,
-    textAlign:'center',
-  },
-})
-
-export default App;
+  buttonRow: {
+    flexBasis: 100,
+    justifyContent: "space-evenly",
+    marginVertical: 16
+  }
+});
