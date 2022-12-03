@@ -20,7 +20,7 @@ function App(){
       <Text style={styles.nome}>@eudaanilo</Text>
 
 
-      <Text style={styles.biografia}>Olá, me chamo Danilo e tenho 16 anos. Faço Desenvolvimento de Sistemas no Insituto Federal de Alagoas, Campus Maceió. Amo a Informática e suas especialidades</Text>
+      <Text style={styles.biografia}>Olá, me chamo Danilo e tenho 17 anos. Faço Desenvolvimento de Sistemas no Insituto Federal de Alagoas, Campus Maceió. Amo a Informática e suas especialidades</Text>
 
       <View style={styles.borda2}></View>
 
