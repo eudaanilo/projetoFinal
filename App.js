@@ -1,47 +1,57 @@
 import React, { useRef } from "react";
-import { Animated, Text, View, StyleSheet, Button, SafeAreaView } from "react-native";
+import { Animated, Image, Text, View, StyleSheet, Button, SafeAreaView } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { StatusBar } from "expo-status-bar";
 
 export default function App(){
 
-
-  function FirstPage(){
+  function FirstPage() {
     return(
-      <View style={styles.FirstPage}>
-        <Text>Aqui vai ficar minha foto de perfil e um breve resumo sobre mim \o/</Text>
+      <View style={styles.body}>
+        <View style={styles.img}>
+          {/* <Image style={styles.imagem} source={require('./assets/fotodan.png')}/> */}
+        </View>
       </View>
     );
   }
 
   function SecondPage() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Aqui ficará um texto sobre mim \o/</Text>
+    return(
+      <View style={styles.body}>
+        <View>
+          <Text>Aqui ficará tudo sobre mim \o/</Text>
+        </View>
       </View>
     );
   }
 
   function ThirdPage() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Aqui ficará tudo sobre minha vida acadêmica \o/</Text>
+    return(
+      <View style={styles.body}>
+        <View>
+          <Text>Aqui ficará tudo sobre minha vida acadêmica \o/</Text>
+        </View>
       </View>
     );
   }
 
   function FourthPage() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Aqui ficará tudo o que eu gosto \o/</Text>
+    return(
+      <View style={styles.body}>
+        <View>
+          <Text>Aqui ficará tudo o que eu gosto \o/</Text>
+        </View>
       </View>
     );
   }
 
   function LastPage() {
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <Text>Aqui será o fim :</Text>
+    return(
+      <View style={styles.body}>
+        <View>
+          <Text>Aqui será o fim :</Text>
+        </View>
       </View>
     );
   }
@@ -62,14 +72,18 @@ export default function App(){
 }
 
 const styles = StyleSheet.create({
-  container:{
-    flex: 1,
+  body:{
+    width: "100%",
+    height: "100%", 
+    backgroundColor: "black",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    color: "purple"
   },
-  FirstPageflex:{
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
+  // img:{
+  //   width: 1,
+  //   height: 645,
+  //   borderRadius:"400",
 
+  // }
 });
