@@ -82,7 +82,7 @@ export default function App(){
           }}
           />
           <Tab.Screen name="Texto sobre mim" 
-          component={FirstPage}
+          component={SecondPage}
           options={{
             tabBarIcon: ({ size, color}) => (
               <Entypo name="info-with-circle" size={size} color={color}/>
@@ -90,7 +90,7 @@ export default function App(){
           }}
           />
           <Tab.Screen name="Vida acadêmica" 
-          component={FirstPage}
+          component={ThirdPage}
           options={{
             tabBarIcon: ({ size, color}) => (
               <Entypo name="graduation-cap" size={size} color={color}/>
@@ -98,7 +98,7 @@ export default function App(){
           }}
           />
           <Tab.Screen name="O que gosto?" 
-          component={FirstPage}
+          component={FourthPage}
           options={{
             tabBarIcon: ({ size, color}) => (
               <Entypo name="code" size={size} color={color}/>
@@ -106,7 +106,7 @@ export default function App(){
           }}
           />
           <Tab.Screen name="Fim" 
-          component={FirstPage}
+          component={LastPage}
           options={{
             tabBarIcon: ({ size, color}) => (
               <Entypo name="aircraft-take-off" size={size} color={color}/>
