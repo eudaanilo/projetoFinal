@@ -3,6 +3,7 @@ import { Animated, Image, Text, View, StyleSheet, Button, SafeAreaView } from "r
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StatusBar } from "expo-status-bar";
+import {Entypo, Feather} from '@expo/vector-icons'
 
 export default function App(){
 
@@ -59,12 +60,59 @@ export default function App(){
   const Tab = createBottomTabNavigator();
   return(
     <NavigationContainer>
-        <Tab.Navigator>
-          <Tab.Screen name="Foto de perfil" component={FirstPage}/>
-          <Tab.Screen name="Texto sobre mim" component={SecondPage}/>
-          <Tab.Screen name="Vida acadêmica" component={ThirdPage}/>
-          <Tab.Screen name="O que gosto?" component={FourthPage}/>
-          <Tab.Screen name="Fim" component={LastPage}/>
+        <Tab.Navigator
+        tabBarOptions={{
+          style:{
+            backgroundColor: 'white',
+            borderTopColor: 'transparent',
+          },
+          activeTintColor: 'FFF',
+          tabStyle:{
+            paddingBottom: 5,
+            paddingTop: 5,
+          }
+        }}
+        >
+          <Tab.Screen name="Foto de perfil" 
+          component={FirstPage}
+          options={{
+            tabBarIcon: ({ size, color}) => (
+              <Entypo name="user" size={size} color={color}/>
+            )
+          }}
+          />
+          <Tab.Screen name="Texto sobre mim" 
+          component={FirstPage}
+          options={{
+            tabBarIcon: ({ size, color}) => (
+              <Entypo name="info-with-circle" size={size} color={color}/>
+            )
+          }}
+          />
+          <Tab.Screen name="Vida acadêmica" 
+          component={FirstPage}
+          options={{
+            tabBarIcon: ({ size, color}) => (
+              <Entypo name="graduation-cap" size={size} color={color}/>
+            )
+          }}
+          />
+          <Tab.Screen name="O que gosto?" 
+          component={FirstPage}
+          options={{
+            tabBarIcon: ({ size, color}) => (
+              <Entypo name="code" size={size} color={color}/>
+            )
+          }}
+          />
+          <Tab.Screen name="Fim" 
+          component={FirstPage}
+          options={{
+            tabBarIcon: ({ size, color}) => (
+              <Entypo name="aircraft-take-off" size={size} color={color}/>
+            )
+          }}
+          />
         </Tab.Navigator>
     </NavigationContainer>
   );
