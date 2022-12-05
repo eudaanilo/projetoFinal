@@ -1,9 +1,8 @@
 import React, { useRef } from "react";
-import { Animated, Image, Text, View, StyleSheet, Button, SafeAreaView } from "react-native";
+import { Image, Text, View, StyleSheet, Linking, TouchableOpacity } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { StatusBar } from "expo-status-bar";
-import {Entypo, Feather} from '@expo/vector-icons'
+import { Entypo } from '@expo/vector-icons'
 
 export default function App(){
 
@@ -11,12 +10,30 @@ export default function App(){
     return(
       <View style={styles.body}>
         <Text style={styles.instituicao}>INSTITUTO FEDERAL DE ALAGOAS</Text>
-        <Image style={styles.imagem}  source={require('./assets/dan.jpg')}/>
-        <Text style={styles.biografia}>IDADE, ESCOLA, CURSO, NACIONALIDADE</Text>
-        <Image style={styles.instagram} source={require('./assets/instagram.png')}/>
-        <Image style={styles.github} source={require('./assets/github.png')}/>
-        <Image style={styles.twitter} source={require('./assets/twitter.png')}/>
-        <Image style={styles.discord} source={require('./assets/discord.png')}/>
+        <Image style={styles.imagem} source={require('./assets/dan.jpg')}/>
+          <Text style={styles.biografia}><Text
+            onPress={() => {
+              Linking.openURL('https://www.instagram.com/eudaanilo/');
+            }}>COLOCAR O TEXTO AQUI
+            </Text>
+          </Text>
+        <TouchableOpacity>
+          <Image style={styles.instagram} source={require('./assets/instagram.png')}
+              onPress={() => {
+                Linking.openURL('https://www.instagram.com/eudaanilo');
+              }
+            }
+          />
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Image style={styles.github} source={require('./assets/github.png')}/>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Image style={styles.twitter} source={require('./assets/twitter.png')}/>
+        </TouchableOpacity>
+        <TouchableOpacity>
+          <Image style={styles.discord} source={require('./assets/discord.png')}/>
+        </TouchableOpacity>
       </View>
     );
   }
@@ -141,7 +158,7 @@ const styles = StyleSheet.create({
     textAlign:'center'
   },
   biografia:{
-    color:'white',
+    color: 'blue',
     marginTop: 20,
     marginLeft: 20,
   },
@@ -154,7 +171,7 @@ const styles = StyleSheet.create({
   github:{
     width: 60,
     height: 60,
-    marginTop: -56,
+    marginTop: -55,
     marginLeft: 140,
   },
   twitter:{
@@ -164,9 +181,9 @@ const styles = StyleSheet.create({
     marginLeft: 260,
   },
   discord:{
-    width: 50,
+    width: 90,
     height: 50,
-    marginTop: -60,
-    marginLeft: 380,
+    marginTop: -57,
+    marginLeft: 360,
   },
 });
