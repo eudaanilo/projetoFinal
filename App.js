@@ -7,29 +7,6 @@ import * as Animatable from 'react-native-animatable';
 
 export default function App(){
 
-  function Welcome(){
-    return(
-      <View style={styles.body}>
-        <Text>Laboratório de Aplicativos</Text>
-
-
-        <View style={styles.containerLogo}>
-          < Animatable.Image name='flipInY' source={require('./assets/cinfo.png')} style={{ width: '100%' }} resizeMode='contain'/>
-        </View>
-
-        <View style={styles.containerForm}>
-          <Text>Laboratório de Aplicativos Ifal Maceió</Text>
-          <Text> Coordenação de Iformática</Text>
-        </View>
-
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.buttonText}>Entrar</Text>
-        </TouchableOpacity>
-
-      </View>
-    );
-  }
-
   function FirstPage() {
     return(
       <View style={styles.body}>
@@ -248,43 +225,4 @@ const styles = StyleSheet.create({
     marginRight: 10,
     marginTop: 5,
   },
-  containerLogo:{
-    flex: 2,
-    backgroundColor:'red',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  containerForm:{
-    flex: 1,
-    backgroundColor: '#FFF',
-    borderTopLeftRadius: 25,
-    borderTopRightRadius: 25,
-    paddingStart: '5%',
-    paddingEnd: '5%'
-  },
-  title:{
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginTop: 28,
-    marginBottom: 12,
-  },
-  text:{
-    color: '#a1a1a1'
-  },
-  button:{
-    position:'absolute',
-    backgroundColor: '#38a69d',
-    borderRadius: 50,
-    paddingVertical: 8,
-    width: '60%',
-    alignSelf:'center',
-    bottom: '15%',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  buttonText:{
-    color: '#FFF',
-    fontSize: 18,
-    fontWeight:'bold',
-  }
 });
