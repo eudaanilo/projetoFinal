@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
   },
   biografia:{
     color:'white',
-    marginTop: 10,
+    marginTop: 20,
     marginLeft: 20,
   },
   instagram:{
@@ -152,19 +152,21 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   github:{
-    width: 50,
-    height: 50,
-    marginTop: 1,
-    marginLeft: 30,
+    width: 60,
+    height: 60,
+    marginTop: -56,
+    marginLeft: 140,
   },
   twitter:{
-    width: 50,
-    height: 50,
-    marginTop: 50,
+    width: 65,
+    height: 65,
+    marginTop: -59,
+    marginLeft: 260,
   },
   discord:{
     width: 50,
     height: 50,
-    marginTop: 50,
+    marginTop: -60,
+    marginLeft: 380,
   },
 });
