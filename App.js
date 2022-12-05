@@ -1,9 +1,9 @@
 import React, { useRef } from "react";
-import { Image, Text, View, StyleSheet, Linking, TouchableOpacity } from "react-native";
+import { Image, Text, View, StyleSheet, Linking, TouchableOpacity, ImageBackground } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Entypo } from '@expo/vector-icons';
-import * as Animatable from 'react-native-animatable';
+import LottieView from 'lottie-react-native';
 
 export default function App(){
 
@@ -91,9 +91,49 @@ export default function App(){
 
   function FourthPage() {
     return(
-      <View style={styles.body}>
-        <View>
-          <Text>Aqui ficará tudo o que eu gosto \o/</Text>
+
+      <View>
+        <View style={styles.figanimationdev}>
+          <LottieView
+            source={require('./assets/dev.json')}
+            autoPlay={true}
+            loop={true}
+          />
+        </View>
+        <View style={styles.figanimationjava}>
+          <LottieView
+            source={require('./assets/java')}
+            autoPlay={true}
+            loop={true}
+          />
+        </View>
+        <View style={styles.figanimationhtml}>
+          <LottieView
+            source={require('./assets/html.json')}
+            autoPlay={true}
+            loop={true}
+          />
+        </View>
+        <View style={styles.figanimationjs}>
+          <LottieView
+            source={require('./assets/js.json')}
+            autoPlay={true}
+            loop={true}
+          />
+        </View>
+        <View style={styles.figanimationrn}>
+          <LottieView
+            source={require('./assets/rn.json')}
+            autoPlay={true}
+            loop={true}
+          />
+        </View>
+        <View style={styles.figanimationcss}>
+          <LottieView
+            source={require('./assets/css.json')}
+            autoPlay={true}
+            loop={true}
+          />
         </View>
       </View>
     );
@@ -102,8 +142,12 @@ export default function App(){
   function LastPage() {
     return(
       <View style={styles.body}>
-        <View>
-          <Text>Aqui será o fim :</Text>
+        <View style={styles.figanimationrobo}>
+          <LottieView
+            source={require('./assets/robo.json')}
+            autoPlay={true}
+            loop={true}
+          />
         </View>
       </View>
     );
@@ -118,7 +162,7 @@ export default function App(){
               backgroundColor: 'white',
               borderTopColor: 'transparent',
             },
-            activeTintColor: 'FFF',
+            activeTintColor: '#000',
             tabStyle:{
               paddingBottom: 5,
               paddingTop: 5,
@@ -174,8 +218,8 @@ export default function App(){
 const styles = StyleSheet.create({
   body:{
     width: "100%",
-    height: "100%", 
-    backgroundColor: "black",
+    height: "100%",
+    backgroundColor: '#000'
   },
   imagem:{
     marginTop: 100,
@@ -185,7 +229,7 @@ const styles = StyleSheet.create({
     borderRadius: 90,
   },
   instituicao:{
-    color:'white',
+    color:'#FFF',
     textAlign:'center'
   },
   biografia:{
@@ -218,11 +262,44 @@ const styles = StyleSheet.create({
     marginLeft: 360,
   },
   textosecpagina:{
-    color: 'white',
+    color: '#FFF',
     fontSize: 20,
     textAlign: 'justify',
     marginLeft: 5,
     marginRight: 10,
     marginTop: 5,
   },
+  figanimationdev:{
+    width: 100,
+    height: 100,
+    marginTop: 100,
+    marginLeft: 170
+  },
+  figanimation:{
+    width: 100,
+    height: 100,
+    marginTop: 100,
+    marginLeft: 170
+  },
+  figanimationjava:{
+
+  },
+  figanimationhtml:{
+
+  },
+  figanimationjs:{
+
+  },
+  figanimationrn:{
+
+  },
+  figanimationcss:{
+
+  },
+  figanimationrobo:{
+    width: '50%',
+    height: '50%',
+    marginTop: 150,
+    marginLeft: 120
+  }
 });
