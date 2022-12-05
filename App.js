@@ -12,7 +12,11 @@ export default function App(){
       <View style={styles.body}>
         <Text style={styles.instituicao}>INSTITUTO FEDERAL DE ALAGOAS</Text>
         <Image style={styles.imagem}  source={require('./assets/dan.jpg')}/>
-
+        <Text style={styles.biografia}>IDADE, ESCOLA, CURSO, NACIONALIDADE</Text>
+        <Image style={styles.instagram} source={require('./assets/instagram.png')}/>
+        <Image style={styles.github} source={require('./assets/github.png')}/>
+        <Image style={styles.twitter} source={require('./assets/twitter.png')}/>
+        <Image style={styles.discord} source={require('./assets/discord.png')}/>
       </View>
     );
   }
@@ -135,5 +139,32 @@ const styles = StyleSheet.create({
   instituicao:{
     color:'white',
     textAlign:'center'
-  }
+  },
+  biografia:{
+    color:'white',
+    marginTop: 10,
+    marginLeft: 20,
+  },
+  instagram:{
+    width: 50,
+    height: 50,
+    marginTop: 50,
+    marginLeft: 20,
+  },
+  github:{
+    width: 50,
+    height: 50,
+    marginTop: 1,
+    marginLeft: 30,
+  },
+  twitter:{
+    width: 50,
+    height: 50,
+    marginTop: 50,
+  },
+  discord:{
+    width: 50,
+    height: 50,
+    marginTop: 50,
+  },
 });
