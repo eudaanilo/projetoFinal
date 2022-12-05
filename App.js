@@ -2,7 +2,8 @@ import React, { useRef } from "react";
 import { Image, Text, View, StyleSheet, Linking, TouchableOpacity } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Entypo } from '@expo/vector-icons'
+import { Entypo } from '@expo/vector-icons';
+import * as Animatable from 'react-native-animatable';
 
 export default function App(){
 
@@ -13,7 +14,7 @@ export default function App(){
 
 
         <View style={styles.containerLogo}>
-          <Image source={require('./assets/cinfo.png')} style={{ width: '100%' }} resizeMode='contain'/>
+          < Animatable.Image name='flipInY' source={require('./assets/cinfo.png')} style={{ width: '100%' }} resizeMode='contain'/>
         </View>
 
         <View style={styles.containerForm}>
@@ -284,5 +285,6 @@ const styles = StyleSheet.create({
   buttonText:{
     color: '#FFF',
     fontSize: 18,
-    fontWeight:'bold'
+    fontWeight:'bold',
+  }
 });
