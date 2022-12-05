@@ -10,9 +10,9 @@ export default function App(){
   function FirstPage() {
     return(
       <View style={styles.body}>
-        <View style={styles.img}>
-          {/* <Image style={styles.imagem} source={require('./assets/fotodan.png')}/> */}
-        </View>
+        <Text style={styles.instituicao}>INSTITUTO FEDERAL DE ALAGOAS</Text>
+        <Image style={styles.imagem}  source={require('./assets/dan.jpg')}/>
+
       </View>
     );
   }
@@ -61,17 +61,17 @@ export default function App(){
   return(
     <NavigationContainer>
         <Tab.Navigator
-        tabBarOptions={{
-          style:{
-            backgroundColor: 'white',
-            borderTopColor: 'transparent',
-          },
-          activeTintColor: 'FFF',
-          tabStyle:{
-            paddingBottom: 5,
-            paddingTop: 5,
-          }
-        }}
+          tabBarOptions={{
+            style:{
+              backgroundColor: 'white',
+              borderTopColor: 'transparent',
+            },
+            activeTintColor: 'FFF',
+            tabStyle:{
+              paddingBottom: 5,
+              paddingTop: 5,
+            }
+          }}
         >
           <Tab.Screen name="Foto de perfil" 
           component={FirstPage}
@@ -124,14 +124,16 @@ const styles = StyleSheet.create({
     width: "100%",
     height: "100%", 
     backgroundColor: "black",
-    alignItems: "center",
-    justifyContent: "center",
-    color: "purple"
   },
-  // img:{
-  //   width: 1,
-  //   height: 645,
-  //   borderRadius:"400",
-
-  // }
+  imagem:{
+    marginTop: 100,
+    marginLeft: 163,
+    width: 140,
+    height: 150,
+    borderRadius: 90,
+  },
+  instituicao:{
+    color:'white',
+    textAlign:'center'
+  }
 });
