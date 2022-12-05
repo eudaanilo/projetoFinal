@@ -17,21 +17,36 @@ export default function App(){
             }}>COLOCAR O TEXTO AQUI
             </Text>
           </Text>
-        <TouchableOpacity>
-          <Image style={styles.instagram} source={require('./assets/instagram.png')}
-              onPress={() => {
-                Linking.openURL('https://www.instagram.com/eudaanilo');
-              }
+        <TouchableOpacity
+            onPress={() => {
+              Linking.openURL('https://www.instagram.com/eudaanilo');
             }
-          />
+          }
+        >
+          <Image style={styles.instagram} source={require('./assets/instagram.png')}/>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+            onPress={() => {
+              Linking.openURL('https://github.com/eudaanilo');
+            }
+          }
+        >
           <Image style={styles.github} source={require('./assets/github.png')}/>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+            onPress={() => {
+              Linking.openURL('https://twitter.com/usbornn');
+            }
+          }
+        >
           <Image style={styles.twitter} source={require('./assets/twitter.png')}/>
         </TouchableOpacity>
-        <TouchableOpacity>
+        <TouchableOpacity
+            onPress={() => {
+              Linking.openURL('https://discord.com/channels/@me');
+            }
+          }
+        >
           <Image style={styles.discord} source={require('./assets/discord.png')}/>
         </TouchableOpacity>
       </View>
@@ -41,9 +56,19 @@ export default function App(){
   function SecondPage() {
     return(
       <View style={styles.body}>
-        <View>
-          <Text>Aqui ficará tudo sobre mim \o/</Text>
-        </View>
+        <Text style={styles.textosecpagina}> Bom, para quem não me conhece, me chamo Danilo e eu tenho 17 anos. 
+          Eu sempre tive uma vocação desde criança por computador, sempre tinha desejo de 
+          mexer em qualquer coisa que estivesse dando erro no telefone, até nós dias de 
+          hoje minha tia me lança um “Limpa aqui meu telefone, porque tá travando demais”, 
+          eu fico olhando e pensando, será que ela acha que eu faço isso na escola? Enfim… 
+          eu sempre gostei de coisas complicadas, mas não ao ponto de me fazer desistir, tipo
+          esse App. Eu penso que coisas complicadas são para pessoas mais intelectuais, e isso
+          é bom… Eu estou fazendo como se fosse algumas especializações em Desenvolvimento
+          de Sistemas, vulgo informática, para fazer de tudo um pouco… A área que eu mais 
+          gostei da mesma foi em montagem e reparação e a parte de front-end, por mais que 
+          react native trabalhe tanto com a parte de front-end e também de back-end eu 
+          gostei de trabalhar com a linguagem. 
+        </Text>
       </View>
     );
   }
@@ -94,7 +119,7 @@ export default function App(){
             }
           }}
         >
-          <Tab.Screen name="Foto de perfil" 
+          <Tab.Screen name="Perfil" 
           component={FirstPage}
           options={{
             tabBarIcon: ({ size, color}) => (
@@ -102,7 +127,7 @@ export default function App(){
             )
           }}
           />
-          <Tab.Screen name="Texto sobre mim" 
+          <Tab.Screen name="Sobre" 
           component={SecondPage}
           options={{
             tabBarIcon: ({ size, color}) => (
@@ -110,7 +135,7 @@ export default function App(){
             )
           }}
           />
-          <Tab.Screen name="Vida acadêmica" 
+          <Tab.Screen name="Educação" 
           component={ThirdPage}
           options={{
             tabBarIcon: ({ size, color}) => (
@@ -118,7 +143,7 @@ export default function App(){
             )
           }}
           />
-          <Tab.Screen name="O que gosto?" 
+          <Tab.Screen name="Gostos" 
           component={FourthPage}
           options={{
             tabBarIcon: ({ size, color}) => (
@@ -186,4 +211,9 @@ const styles = StyleSheet.create({
     marginTop: -57,
     marginLeft: 360,
   },
+  textosecpagina:{
+    color: 'white',
+    fontSize: 20,
+    textAlign: 'justify',
+  }
 });
