@@ -141,6 +141,27 @@ export default function App(){
             loop={true}
           />
         </View>
+        <View style={styles.figanimationmusic}>
+          <LottieView
+            source={require('./assets/music.json')}
+            autoPlay={true}
+            loop={true}
+          />
+        </View>
+        <View style={styles.figanimationcpu}>
+          <LottieView
+            source={require('./assets/cpu.json')}
+            autoPlay={true}
+            loop={true}
+          />
+        </View>
+        <View style={styles.figanimationgpu}>
+          <LottieView
+            source={require('./assets/gpu.json')}
+            autoPlay={true}
+            loop={true}
+          />
+        </View>
       </View>
     );
   }
@@ -276,17 +297,17 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   figanimationdev:{
-    width: 300,
+    width: 200,
     height: 300,
     position: 'absolute',
-    left: 100,
+    left: 150,
     top: 150
   },
   figanimationjava:{
     width: 150,
     height: 130,
     position: 'absolute',
-    right: 160,
+    right: 150,
     top: 40
   },
   figanimationhtml:{
@@ -321,8 +342,29 @@ const styles = StyleSheet.create({
     width: 150,
     height: 130,
     position: 'absolute',
-    right: 300,
+    right: 290,
     top: 45
+  },
+  figanimationcpu:{
+    width: 150,
+    height: 130,
+    position: 'absolute',
+    right: 30,
+    top: 350
+  },
+  figanimationgpu:{
+    width: 130,
+    height: 130,
+    position: 'absolute',
+    right: 310,
+    top: 350
+  },
+  figanimationmusic:{
+    width: 60,
+    height: 60,
+    position: 'absolute',
+    right: 370,
+    top: 220
   },
   figanimationrobo:{
     width: '50%',
