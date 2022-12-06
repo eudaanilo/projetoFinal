@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Image, Text, View, StyleSheet, Linking, TouchableOpacity, ImageBackground } from "react-native";
+import { Image, Text, View, StyleSheet, Linking, TouchableOpacity } from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Entypo } from '@expo/vector-icons';
@@ -91,7 +91,6 @@ export default function App(){
 
   function FourthPage() {
     return(
-
       <View>
         <View style={styles.figanimationdev}>
           <LottieView
@@ -131,6 +130,13 @@ export default function App(){
         <View style={styles.figanimationcss}>
           <LottieView
             source={require('./assets/css.json')}
+            autoPlay={true}
+            loop={true}
+          />
+        </View>
+        <View style={styles.figanimationpython}>
+          <LottieView
+            source={require('./assets/python.json')}
             autoPlay={true}
             loop={true}
           />
@@ -275,7 +281,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: 100,
     top: 150
-
   },
   figanimationjava:{
     width: 150,
@@ -286,15 +291,17 @@ const styles = StyleSheet.create({
   },
   figanimationhtml:{
     width: 100,
-    height: 100,
+    height: 200,
     position: 'absolute',
-    bottom: 10,
-    right: 10
+    right: 290,
+    top: 450
   },
   figanimationjs:{
     width: 200,
-    height: 200,
+    height: 300,
     position: 'absolute',
+    right: 125,
+    top: 400
   },
   figanimationrn:{
     width: 150,
@@ -309,6 +316,13 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 60,
     top: 450
+  },
+  figanimationpython:{
+    width: 150,
+    height: 130,
+    position: 'absolute',
+    right: 300,
+    top: 45
   },
   figanimationrobo:{
     width: '50%',
