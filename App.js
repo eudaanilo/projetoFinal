@@ -275,26 +275,25 @@ const styles = StyleSheet.create({
     marginTop: 100,
     marginLeft: 170
   },
-  figanimation:{
+  figanimationjava:{
     width: 100,
     height: 100,
-    marginTop: 100,
-    marginLeft: 170
-  },
-  figanimationjava:{
-
   },
   figanimationhtml:{
-
+    width: 100,
+    height: 100,
   },
   figanimationjs:{
-
+    width: 100,
+    height: 100,
   },
   figanimationrn:{
-
+    width: 100,
+    height: 100,
   },
   figanimationcss:{
-
+    width: 100,
+    height: 100,
   },
   figanimationrobo:{
     width: '50%',
