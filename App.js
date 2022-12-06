@@ -278,14 +278,18 @@ const styles = StyleSheet.create({
 
   },
   figanimationjava:{
-    width: 100,
-    height: 100,
+    width: 150,
+    height: 130,
     position: 'absolute',
+    right: 160,
+    top: 40
   },
   figanimationhtml:{
     width: 100,
     height: 100,
     position: 'absolute',
+    bottom: 10,
+    right: 10
   },
   figanimationjs:{
     width: 200,
@@ -293,14 +297,18 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
   figanimationrn:{
-    width: 100,
-    height: 100,
+    width: 150,
+    height: 130,
     position: 'absolute',
+    right: 10,
+    top: 40
   },
   figanimationcss:{
-    width: 200,
+    width: 100,
     height: 200,
     position: 'absolute',
+    right: 60,
+    top: 450
   },
   figanimationrobo:{
     width: '50%',
