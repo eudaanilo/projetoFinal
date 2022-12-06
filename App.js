@@ -270,35 +270,42 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   figanimationdev:{
-    width: 100,
-    height: 100,
-    marginTop: 100,
-    marginLeft: 170
+    width: 300,
+    height: 300,
+    position: 'absolute',
+    left: 100,
+    top: 150
+
   },
   figanimationjava:{
     width: 100,
     height: 100,
+    position: 'absolute',
   },
   figanimationhtml:{
     width: 100,
     height: 100,
+    position: 'absolute',
   },
   figanimationjs:{
-    width: 100,
-    height: 100,
+    width: 200,
+    height: 200,
+    position: 'absolute',
   },
   figanimationrn:{
     width: 100,
     height: 100,
+    position: 'absolute',
   },
   figanimationcss:{
-    width: 100,
-    height: 100,
+    width: 200,
+    height: 200,
+    position: 'absolute',
   },
   figanimationrobo:{
     width: '50%',
     height: '50%',
     marginTop: 150,
-    marginLeft: 120
+    marginLeft: 120,
   }
 });
