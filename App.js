@@ -11,45 +11,49 @@ export default function App(){
     return(
       <View style={styles.body}>
         <Text style={styles.instituicao}>INSTITUTO FEDERAL DE ALAGOAS</Text>
-        <Image style={styles.imagem} source={require('./assets/dan.jpg')}/>
-          <Text style={styles.biografia}><Text
-            onPress={() => {
-              Linking.openURL('https://www.instagram.com/eudaanilo/');
-            }}>COLOCAR O TEXTO AQUI
+        <View >
+          <Image style={styles.imagem} source={require('./assets/dan.jpg')}/>
+            <Text style={styles.biografia}><Text
+              onPress={() => {
+                Linking.openURL('https://www.instagram.com/eudaanilo/');
+              }}>COLOCAR O TEXTO AQUI
+              </Text>
             </Text>
-          </Text>
-        <TouchableOpacity
-            onPress={() => {
-              Linking.openURL('https://www.instagram.com/eudaanilo');
+            <View style={styles.logos}>
+          <TouchableOpacity
+              onPress={() => {
+                Linking.openURL('https://www.instagram.com/eudaanilo');
+              }
             }
-          }
-        >
-          <Image style={styles.instagram} source={require('./assets/instagram.png')}/>
-        </TouchableOpacity>
-        <TouchableOpacity
-            onPress={() => {
-              Linking.openURL('https://github.com/eudaanilo');
+          >
+            <Image style={styles.instagram} source={require('./assets/instagram.png')}/>
+          </TouchableOpacity>
+          <TouchableOpacity
+              onPress={() => {
+                Linking.openURL('https://github.com/eudaanilo');
+              }
             }
-          }
-        >
-          <Image style={styles.github} source={require('./assets/github.png')}/>
-        </TouchableOpacity>
-        <TouchableOpacity
-            onPress={() => {
-              Linking.openURL('https://twitter.com/usbornn');
+          >
+            <Image style={styles.github} source={require('./assets/github.png')}/>
+          </TouchableOpacity>
+          <TouchableOpacity
+              onPress={() => {
+                Linking.openURL('https://twitter.com/usbornn');
+              }
             }
-          }
-        >
-          <Image style={styles.twitter} source={require('./assets/twitter.png')}/>
-        </TouchableOpacity>
-        <TouchableOpacity
-            onPress={() => {
-              Linking.openURL('https://discord.com/channels/@me');
+          >
+            <Image style={styles.twitter} source={require('./assets/twitter.png')}/>
+          </TouchableOpacity>
+          <TouchableOpacity
+              onPress={() => {
+                Linking.openURL('https://discord.com/channels/@me');
+              }
             }
-          }
-        >
-          <Image style={styles.discord} source={require('./assets/discord.png')}/>
-        </TouchableOpacity>
+          >
+            <Image style={styles.discord} source={require('./assets/discord.png')}/>
+          </TouchableOpacity>
+          </View>
+          </View>
       </View>
     );
   }
@@ -82,8 +86,8 @@ export default function App(){
   function ThirdPage() {
     return(
       <View style={styles.body}>
-        <View>
-          <Text>Aqui ficará tudo sobre minha vida acadêmica \o/</Text>
+        <View style={styles.borda}>
+          <Text></Text>
         </View>
       </View>
     );
@@ -248,6 +252,16 @@ const styles = StyleSheet.create({
     height: "100%",
     backgroundColor: '#000'
   },
+  logos:{
+    display:'flex',
+    flexDirection:"row",
+    justifyContent:"space-evenly",
+    alignItems:"center"
+  },
+  borda:{
+    backgroundColor: 'purple',
+    height: 80
+  },
   imagem:{
     marginTop: 100,
     marginLeft: 163,
@@ -267,28 +281,22 @@ const styles = StyleSheet.create({
   instagram:{
     width: 50,
     height: 50,
-    marginTop: 50,
-    marginLeft: 20,
+
   },
   github:{
     width: 60,
     height: 60,
-    marginTop: -55,
-    marginLeft: 140,
   },
   twitter:{
     width: 65,
     height: 65,
-    marginTop: -59,
-    marginLeft: 260,
   },
   discord:{
     width: 90,
     height: 50,
-    marginTop: -57,
-    marginLeft: 360,
   },
   textosecpagina:{
+    disoplay: 'flex',
     color: '#FFF',
     fontSize: 20,
     textAlign: 'justify',
