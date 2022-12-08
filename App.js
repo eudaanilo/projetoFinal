@@ -11,7 +11,7 @@ export default function App(){
     return(
       <View style={styles.body}>
         <Text style={styles.instituicao}>INSTITUTO FEDERAL DE ALAGOAS</Text>
-        <View >
+        <View>
           <Image style={styles.imagem} source={require('./assets/dan.jpg')}/>
             <Text style={styles.biografia}><Text
               onPress={() => {
