@@ -20,39 +20,39 @@ export default function App(){
               </Text>
             </Text>
             <View style={styles.logos}>
-          <TouchableOpacity
-              onPress={() => {
-                Linking.openURL('https://www.instagram.com/eudaanilo');
-              }
-            }
-          >
-            <Image style={styles.instagram} source={require('./assets/instagram.png')}/>
-          </TouchableOpacity>
-          <TouchableOpacity
-              onPress={() => {
-                Linking.openURL('https://github.com/eudaanilo');
-              }
-            }
-          >
-            <Image style={styles.github} source={require('./assets/github.png')}/>
-          </TouchableOpacity>
-          <TouchableOpacity
-              onPress={() => {
-                Linking.openURL('https://twitter.com/usbornn');
-              }
-            }
-          >
-            <Image style={styles.twitter} source={require('./assets/twitter.png')}/>
-          </TouchableOpacity>
-          <TouchableOpacity
-              onPress={() => {
-                Linking.openURL('https://discord.com/channels/@me');
-              }
-            }
-          >
-            <Image style={styles.discord} source={require('./assets/discord.png')}/>
-          </TouchableOpacity>
-          </View>
+              <TouchableOpacity
+                  onPress={() => {
+                    Linking.openURL('https://www.instagram.com/eudaanilo');
+                  }
+                }
+              >
+              <Image style={styles.instagram} source={require('./assets/instagram.png')}/>
+              </TouchableOpacity>
+              <TouchableOpacity
+                  onPress={() => {
+                    Linking.openURL('https://github.com/eudaanilo');
+                  }
+                }
+              >
+                <Image style={styles.github} source={require('./assets/github.png')}/>
+              </TouchableOpacity>
+              <TouchableOpacity
+                  onPress={() => {
+                    Linking.openURL('https://twitter.com/usbornn');
+                  }
+                }
+              >
+                <Image style={styles.twitter} source={require('./assets/twitter.png')}/>
+              </TouchableOpacity>
+              <TouchableOpacity
+                  onPress={() => {
+                    Linking.openURL('https://discord.com/channels/@me');
+                  }
+                }
+              >
+                <Image style={styles.discord} source={require('./assets/discord.png')}/>
+              </TouchableOpacity>
+            </View>
           </View>
       </View>
     );
@@ -103,47 +103,51 @@ export default function App(){
             loop={true}
           />
         </View>
-        <View style={styles.figanimationjava}>
-          <LottieView
-            source={require('./assets/java')}
-            autoPlay={true}
-            loop={true}
-          />
+        <View style={styles.linguagens}>
+          <View style={styles.figanimationpython}>
+            <LottieView
+              source={require('./assets/python.json')}
+              autoPlay={true}
+              loop={true}
+            />
+          </View>
+          <View style={styles.figanimationjava}>
+            <LottieView
+              source={require('./assets/java')}
+              autoPlay={true}
+              loop={true}
+            />
+          </View>
+          <View style={styles.figanimationrn}>
+            <LottieView
+              source={require('./assets/rn.json')}
+              autoPlay={true}
+              loop={true}
+            />
+          </View>
         </View>
-        <View style={styles.figanimationhtml}>
-          <LottieView
-            source={require('./assets/html.json')}
-            autoPlay={true}
-            loop={true}
-          />
-        </View>
-        <View style={styles.figanimationjs}>
-          <LottieView
-            source={require('./assets/js.json')}
-            autoPlay={true}
-            loop={true}
-          />
-        </View>
-        <View style={styles.figanimationrn}>
-          <LottieView
-            source={require('./assets/rn.json')}
-            autoPlay={true}
-            loop={true}
-          />
-        </View>
-        <View style={styles.figanimationcss}>
-          <LottieView
-            source={require('./assets/css.json')}
-            autoPlay={true}
-            loop={true}
-          />
-        </View>
-        <View style={styles.figanimationpython}>
-          <LottieView
-            source={require('./assets/python.json')}
-            autoPlay={true}
-            loop={true}
-          />
+        <View>
+          <View style={styles.figanimationhtml}>
+            <LottieView
+              source={require('./assets/html.json')}
+              autoPlay={true}
+              loop={true}
+            />
+          </View>
+          <View style={styles.figanimationjs}>
+            <LottieView
+              source={require('./assets/js.json')}
+              autoPlay={true}
+              loop={true}
+            />
+          </View>
+          <View style={styles.figanimationcss}>
+            <LottieView
+              source={require('./assets/css.json')}
+              autoPlay={true}
+              loop={true}
+            />
+          </View>
         </View>
         <View style={styles.figanimationmusic}>
           <LottieView
@@ -373,6 +377,12 @@ const styles = StyleSheet.create({
     position: 'absolute',
     right: 370,
     top: 220
+  },
+  linguagens:{
+    display:'flex',
+    flexDirection:"row",
+    justifyContent:"space-evenly",
+    alignItems:"center"
   },
   figanimationrobo:{
     width: '50%',
