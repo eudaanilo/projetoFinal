@@ -10,7 +10,7 @@ export default function App(){
   function FirstPage() {
     return(
       <View style={styles.body}>
-        <Text style={styles.instituicao}>INSTITUTO FEDERAL DE ALAGOAS</Text>
+        <Text style={styles.instituicao}>Danilo da Silva Alves</Text>
         <View>
             <TouchableOpacity
               onPress={() => {
@@ -187,6 +187,13 @@ export default function App(){
   function LastPage() {
     return(
       <View style={styles.body}>
+        <View style={styles.seminternet}>
+          <LottieView
+          source={require('./assets/semconexao.json')}
+          autoPlay={true}
+          loop={true}
+          />
+        </View>
         <View style={styles.figanimationrobo}>
           <LottieView
             source={require('./assets/robo.json')}
