@@ -12,13 +12,21 @@ export default function App(){
       <View style={styles.body}>
         <Text style={styles.instituicao}>INSTITUTO FEDERAL DE ALAGOAS</Text>
         <View>
-          <Image style={styles.imagem} source={require('./assets/dan.jpg')}/>
+            <TouchableOpacity
+              onPress={() => {
+                Linking.openURL('https://www.instagram.com/eudaanilo/')
+              }
+            }
+            >
+              <Image style={styles.imagem} source={require('./assets/dan.jpg')}/>
+            </TouchableOpacity>
             <TouchableOpacity>
-              <Text style={styles.biografia}><Text
-                onPress={() => {
-                  Linking.openURL('https://www.instagram.com/eudaanilo/');
-                }}>Tecnologia da Informação 🖥 
-                </Text>
+              <Text style={styles.biografia}>
+                IFAL Maceió 🏫 {'\n'}
+                error 404 🚨 {'\n'}
+                Tecnologia da Informação 🖥 {'\n'} 
+                Desenvolvimento de Sistemas 👨‍💻 {'\n'} 
+                Maceió - AL 🏝 {'\n'}
               </Text>
             </TouchableOpacity>
             <View style={styles.logos}>
@@ -269,7 +277,7 @@ const styles = StyleSheet.create({
     height: 80
   },
   imagem:{
-    marginTop: 100,
+    marginTop: 90,
     marginLeft: 163,
     width: 140,
     height: 150,
@@ -281,13 +289,12 @@ const styles = StyleSheet.create({
   },
   biografia:{
     color: '#FFF',
-    marginTop: 20,
-    marginLeft: 30,
+    marginTop: 60,
+    marginLeft: 30
   },
   instagram:{
     width: 50,
-    height: 50,
-
+    height: 50
   },
   github:{
     width: 60,
