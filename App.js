@@ -13,12 +13,14 @@ export default function App(){
         <Text style={styles.instituicao}>INSTITUTO FEDERAL DE ALAGOAS</Text>
         <View>
           <Image style={styles.imagem} source={require('./assets/dan.jpg')}/>
-            <Text style={styles.biografia}><Text
-              onPress={() => {
-                Linking.openURL('https://www.instagram.com/eudaanilo/');
-              }}>COLOCAR O TEXTO AQUI
+            <TouchableOpacity>
+              <Text style={styles.biografia}><Text
+                onPress={() => {
+                  Linking.openURL('https://www.instagram.com/eudaanilo/');
+                }}>Tecnologia da Informação 🖥 
+                </Text>
               </Text>
-            </Text>
+            </TouchableOpacity>
             <View style={styles.logos}>
               <TouchableOpacity
                   onPress={() => {
@@ -126,7 +128,7 @@ export default function App(){
             />
           </View>
         </View>
-        <View>
+        <View style={styles.linguagensfront}>
           <View style={styles.figanimationhtml}>
             <LottieView
               source={require('./assets/html.json')}
@@ -278,9 +280,9 @@ const styles = StyleSheet.create({
     textAlign:'center'
   },
   biografia:{
-    color: 'blue',
+    color: '#FFF',
     marginTop: 20,
-    marginLeft: 20,
+    marginLeft: 30,
   },
   instagram:{
     width: 50,
@@ -379,6 +381,12 @@ const styles = StyleSheet.create({
     top: 220
   },
   linguagens:{
+    display:'flex',
+    flexDirection:"row",
+    justifyContent:"space-evenly",
+    alignItems:"center"
+  },
+  linguagensfront:{
     display:'flex',
     flexDirection:"row",
     justifyContent:"space-evenly",
