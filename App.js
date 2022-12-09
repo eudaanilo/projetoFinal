@@ -345,13 +345,14 @@ const styles = StyleSheet.create({
     height: 50,
   },
   textosecpagina:{
-    disoplay: 'flex',
+    display: 'flex',
+    flex: 1,
     color: '#FFF',
-    fontSize: 20,
+    fontSize: 22,
     textAlign: 'justify',
     marginLeft: 5,
     marginRight: 10,
-    marginTop: 5,
+    marginTop: 17,
   },
   figanimationdev:{
     width: 200,
