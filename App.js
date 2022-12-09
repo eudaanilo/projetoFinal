@@ -97,17 +97,15 @@ export default function App(){
 
   function ThirdPage() {
     return(
-      <View>
-        <View style={styles.body2}>
-          <View>
-            <Image style={styles.logoifal} source={require('./assets/ifalogo.png')}/>
-          </View>
-          <View>
-            <Image style={styles.cinfologo} source={require('./assets/cinfologo.png')}/>
-          </View>
-          <View>
-          <Image style={styles.senaclogo} source={require('./assets/senaclogo.png')}/>
-          </View>
+      <View style={styles.body2}>
+        <View style={styles.bkgoroundifal}>
+          <Image style={styles.logoifal} source={require('./assets/ifalogo.png')}/>
+        </View>
+        <View style={styles.bkgoroundcinfo}>
+          <Image style={styles.logocinfo} source={require('./assets/cinfologo.png')}/>
+        </View>
+        <View style={styles.bkgoroundsenac}>
+          <Image style={styles.logosenac} source={require('./assets/senaclogo.png')}/>
         </View>
       </View>
     );
@@ -284,8 +282,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#000'
   },
   body2:{
-    width: "100%",
-    height: "100%",
+    flex: 1,
+    justifyContent: 'espace-evenly'
   },
   logos:{
     display:'flex',
@@ -317,25 +315,19 @@ const styles = StyleSheet.create({
     marginLeft: 30
   },
   logoifal:{
-    position: "absolute",
     width: 400,
-    height: 400,
-    alignSelf: "center",
-    top: 1,
+    height: 150,
+    alignSelf: "center"
   },
-  senaclogo:{
-    position: "absolute",
+  logosenac:{
     width: 170,
     height: 100,
-    alignSelf: "center",
-    top: 600
+    alignSelf: "center"
   },
-  cinfologo:{
-    position: "absolute",
+  logocinfo:{
     width: 400,
-    height: 400,
-    top: 300,
-    alignSelf: "center",
+    height: 115,
+    alignSelf: "center"
   },
   instagram:{
     width: 50,
