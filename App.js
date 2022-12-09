@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
   body2:{
     flex: 1,
     flexDirection: 'column',
-    justifyContent: 'espace-evenly',
+    alignContent: 'espace-evenly', //essa linha faz dar erro no expo
   },
   logos:{
     display:'flex',
