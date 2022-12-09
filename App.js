@@ -283,7 +283,8 @@ const styles = StyleSheet.create({
   },
   body2:{
     flex: 1,
-    justifyContent: 'espace-evenly'
+    flexDirection: 'column',
+    justifyContent: 'espace-evenly',
   },
   logos:{
     display:'flex',
@@ -317,17 +318,14 @@ const styles = StyleSheet.create({
   logoifal:{
     width: 400,
     height: 150,
-    alignSelf: "center"
   },
   logosenac:{
     width: 170,
     height: 100,
-    alignSelf: "center"
   },
   logocinfo:{
     width: 400,
     height: 115,
-    alignSelf: "center"
   },
   instagram:{
     width: 50,
