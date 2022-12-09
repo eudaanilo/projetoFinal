@@ -23,45 +23,47 @@ export default function App(){
             <TouchableOpacity>
               <Text style={styles.biografia}>
                 IFAL Maceió 🏫 {'\n'}
-                error 404 🚨 {'\n'}
+                Error 404 🚨 {'\n'}
                 Tecnologia da Informação 🖥 {'\n'} 
                 Desenvolvimento de Sistemas 👨‍💻 {'\n'} 
                 Maceió - AL 🏝 {'\n'}
               </Text>
             </TouchableOpacity>
-            <View style={styles.logos}>
-              <TouchableOpacity
-                  onPress={() => {
-                    Linking.openURL('https://www.instagram.com/eudaanilo');
+            <View style={styles.redes}>
+              <View style={styles.logos}>
+                <TouchableOpacity
+                    onPress={() => {
+                      Linking.openURL('https://www.instagram.com/eudaanilo');
+                    }
                   }
-                }
-              >
-              <Image style={styles.instagram} source={require('./assets/instagram.png')}/>
-              </TouchableOpacity>
-              <TouchableOpacity
-                  onPress={() => {
-                    Linking.openURL('https://github.com/eudaanilo');
+                >
+                <Image style={styles.instagram} source={require('./assets/instagram.png')}/>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => {
+                      Linking.openURL('https://github.com/eudaanilo');
+                    }
                   }
-                }
-              >
-                <Image style={styles.github} source={require('./assets/github.png')}/>
-              </TouchableOpacity>
-              <TouchableOpacity
-                  onPress={() => {
-                    Linking.openURL('https://twitter.com/usbornn');
+                >
+                  <Image style={styles.github} source={require('./assets/github.png')}/>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => {
+                      Linking.openURL('https://twitter.com/usbornn');
+                    }
                   }
-                }
-              >
-                <Image style={styles.twitter} source={require('./assets/twitter.png')}/>
-              </TouchableOpacity>
-              <TouchableOpacity
-                  onPress={() => {
-                    Linking.openURL('https://discord.com/channels/@me');
+                >
+                  <Image style={styles.twitter} source={require('./assets/twitter.png')}/>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => {
+                      Linking.openURL('https://discord.com/channels/@me');
+                    }
                   }
-                }
-              >
-                <Image style={styles.discord} source={require('./assets/discord.png')}/>
-              </TouchableOpacity>
+                >
+                  <Image style={styles.discord} source={require('./assets/discord.png')}/>
+                </TouchableOpacity>
+              </View>
             </View>
           </View>
       </View>
@@ -95,9 +97,17 @@ export default function App(){
 
   function ThirdPage() {
     return(
-      <View style={styles.body}>
-        <View style={styles.borda}>
-          <Text></Text>
+      <View>
+        <View style={styles.body2}>
+          <View>
+            <Image style={styles.logoifal} source={require('./assets/ifalogo.png')}/>
+          </View>
+          <View>
+            <Image style={styles.cinfologo} source={require('./assets/cinfologo.png')}/>
+          </View>
+          <View>
+          <Image style={styles.senaclogo} source={require('./assets/senaclogo.png')}/>
+          </View>
         </View>
       </View>
     );
@@ -273,11 +283,18 @@ const styles = StyleSheet.create({
     height: "100%",
     backgroundColor: '#000'
   },
+  body2:{
+    width: "100%",
+    height: "100%",
+  },
   logos:{
     display:'flex',
     flexDirection:"row",
     justifyContent:"space-evenly",
     alignItems:"center"
+  },
+  redes:{
+    marginTop: 100,
   },
   borda:{
     backgroundColor: 'purple',
@@ -298,6 +315,27 @@ const styles = StyleSheet.create({
     color: '#FFF',
     marginTop: 60,
     marginLeft: 30
+  },
+  logoifal:{
+    position: "absolute",
+    width: 400,
+    height: 400,
+    alignSelf: "center",
+    top: 1,
+  },
+  senaclogo:{
+    position: "absolute",
+    width: 170,
+    height: 100,
+    alignSelf: "center",
+    top: 600
+  },
+  cinfologo:{
+    position: "absolute",
+    width: 400,
+    height: 400,
+    top: 300,
+    alignSelf: "center",
   },
   instagram:{
     width: 50,
